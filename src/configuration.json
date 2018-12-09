@@ -1,0 +1,53 @@
+{
+	"debug": true,
+	"smtp_server": "smtp.gmail.com",
+	"server_port": 587,
+	"username": "your_username@gmail.com",
+	"password": "XXXXXX",
+	"sender_email": "your_username@gmail.com",
+	"participants": [
+		{
+			"name": "Participant 1",
+			"email": "participant1@example.com",
+			"exclude_list": [
+				"Participant 2"
+			]
+		},
+		{
+			"name": "Participant 2",
+			"email": "participant2@example.com",
+			"exclude_list": [
+				"Participant 1",
+				"Participant 3"
+			]
+		},
+		{
+			"name": "Participant 3",
+			"email": "participant3@example.com",
+			"exclude_list": [
+				"Participant 4"
+			]
+		},
+		{
+			"name": "Participant 4",
+			"email": "participant4@example.com",
+			"exclude_list": [
+				"Participant 3"
+			]
+		},
+		{
+			"name": "Participant 5",
+			"email": "participant5@example.com",
+			"exclude_list": [
+				"Participant 6"
+			]
+		},
+		{
+			"name": "Participant 6",
+			"email": "participant6@example.com",
+			"exclude_list": [
+				"Participant 5"
+			]
+		}
+	]
+}
