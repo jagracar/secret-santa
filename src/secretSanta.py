@@ -6,13 +6,16 @@ https://en.wikipedia.org/wiki/Secret_Santa
 @author: Javier Gracia Carpio (jagracar)
 """
 
+import os
 import json
 import numpy as np
 from emailUtils import EmailSender
 
 if __name__ == "__main__":
     # Load the configuration file
-    with open("configuration.json", "r") as configuration_file:
+    package_directory = os.path.dirname(os.path.abspath(__file__))
+
+    with open(os.path.join(package_directory, "configuration.json"), "r") as configuration_file:
         configuration = json.load(configuration_file)
 
     # Extract the participants list
@@ -47,12 +50,13 @@ if __name__ == "__main__":
     # Check if we are in debug mode or not
     if configuration["debug"]:
         # Print the final result
+        print("")
         print("------------")
         print("Final result")
         print("------------")
 
         for participant, assigned_index in zip(participants, permutation):
-            print("   %s --> %s" % (participant["name"], participants[assigned_index]["name"]))
+            print("%s --> %s" % (participant["name"], participants[assigned_index]["name"]))
     else:
         # Initialize the email sender
         emailSender = EmailSender(configuration["smtp_server"], configuration["server_port"])

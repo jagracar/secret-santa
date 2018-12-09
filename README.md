@@ -10,7 +10,7 @@ Clone the git repository:
 git clone https://github.com/jagracar/secret-santa.git
 ```
 
-Edit the configuration file `secret-santa/src/configuration.js` with the appropiate SMTP server parameters and your Secret Santa participants list.
+Edit the configuration file `secret-santa/src/configuration.js` with the appropiate SMTP server parameters and your Secret Santa participant list.
 
 Run the main program:
 
